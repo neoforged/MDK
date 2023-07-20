@@ -47,7 +47,7 @@ description='''${mod_description}'''
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="${neo_forge_version_range}" #mandatory
+    versionRange="${neo_version_range}" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the dependency is not mandatory
     # BEFORE - This mod is loaded BEFORE the dependency
     # AFTER - This mod is loaded AFTER the dependency
