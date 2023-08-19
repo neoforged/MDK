@@ -49,18 +49,9 @@ configurations {
     extendConfigurations(runtimeOnly, gametestRuntimeOnly, testRuntimeOnly, datagenRuntimeOnly)
 }
 static void extendConfigurations(Configuration base, Configuration... configurations) {
-    for (def configuration : configurations) {
+    for (configuration in configurations) {
         configuration.extendsFrom(base)
     }
-}
-
-// prevent duplicate resource issues from additional sourceSets
-processResources {
-    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
-}
-
-processGametestResources {
-    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
 
 
@@ -219,6 +210,9 @@ tasks.withType(ProcessResources).configureEach {
     filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
         expand replaceProperties + [project: project]
     }
+
+    // prevent duplicate resource issues from additional sourceSets
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
