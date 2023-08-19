@@ -123,6 +123,13 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
+            // Enables better hot reloading if using the JetBrains Runtime
+            // https://github.com/JetBrains/JetBrainsRuntime
+            // This reduces errors when adding and removing methods without restarting the game
+            // Some hot reload changes cause strange results or crashes, reloading the game is still sometimes necessary
+            // Also check out: https://plugins.jetbrains.com/plugin/14832-single-hotswap
+            jvmArgs '-XX:+AllowEnhancedClassRedefinition', '-XX:+IgnoreUnrecognizedVMOptions', '-XX:+AllowRedefinitionToAddDeleteMethods'
+
             mods {
                 "${mod_id}" {
                     source sourceSets.main
