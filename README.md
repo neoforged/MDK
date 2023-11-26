@@ -7,7 +7,8 @@ mod. Simply create a new repository cloned from this one, by following the
 instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
 Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-**Note**: On Eclpse you need to run `runClient` first from CLI to make run configs work.
+
+> **Note**: For Eclipse users, you must run the `runClient` task first from the terminal (such as `./gradlew runClient`) for the run configs to work.
 
 If at any point you are missing libraries in your IDE, or you've run into problems you can
 run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
