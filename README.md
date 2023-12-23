@@ -26,3 +26,4 @@ Additional Resources:
 ==========
 Community Documentation: https://docs.neoforged.net/  
 NeoForged Discord: https://discord.neoforged.net/
+Kotlin DSL Template: https://github.com/Nekretaur/NeoForgeKotlinDSLMDK/
