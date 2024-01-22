@@ -8,7 +8,7 @@ instructions at [github](https://docs.github.com/en/repositories/creating-and-ma
 
 Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
 
-> **Note**: For Eclipse, Use tasks in `Launch Group` instead of ones founds in `Java Application`. Preparation task must run before launching the game. Neogradle uses Launch groups to do these subsequently.
+> **Note**: For Eclipse, use tasks in `Launch Group` instead of ones founds in `Java Application`. A preparation task must run before launching the game. NeoGradle uses launch groups to do these subsequently.
 
 If at any point you are missing libraries in your IDE, or you've run into problems you can
 run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
