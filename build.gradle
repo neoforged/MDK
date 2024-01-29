@@ -40,6 +40,8 @@ runs {
         // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
         systemProperty 'neoforge.logging.console.level', 'debug'
 
+        jvmArgument "-XX:+AllowEnhancedClassRedefinition"
+
         modSource project.sourceSets.main
     }
 
