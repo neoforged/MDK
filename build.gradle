@@ -35,12 +35,12 @@ runs {
         // "SCAN": For mods scan.
         // "REGISTRIES": For firing of registry events.
         // "REGISTRYDUMP": For getting the contents of all registries.
-        run.systemProperty 'neoforge.logging.markers', 'REGISTRIES'
+        run.systemProperty 'forge.logging.markers', 'REGISTRIES'
 
         // Recommended logging level for the console
         // You can set various levels here.
         // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
-        run.systemProperty 'neoforge.logging.console.level', 'debug'
+        run.systemProperty 'forge.logging.console.level', 'debug'
 
         if (run.project.javaToolchains.launcherFor(java.toolchain).map { it.metadata.vendor }.getOrElse("").contains("JetBrains")) {
             run.jvmArgument("-XX:+AllowEnhancedClassRedefinition")
@@ -51,11 +51,11 @@ runs {
 
     client {
         // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
     }
 
     server {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
         programArgument '--nogui'
     }
 
