@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.94'
+    id 'net.neoforged.gradle.userdev' version '7.0.95'
 }
 
 version = mod_version
@@ -20,7 +20,7 @@ base {
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-if (rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')) {
+if (rootProject.file('src/main/resources/META-INF/accesstransformer.cfg').exists()) {
     minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
 }
 //minecraft.accessTransformers.entry public net.minecraft.client.Minecraft textureManager # textureManager
@@ -42,9 +42,12 @@ runs {
         // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
         run.systemProperty 'forge.logging.console.level', 'debug'
 
-        if (run.project.javaToolchains.launcherFor(java.toolchain).map { it.metadata.vendor }.getOrElse("").contains("JetBrains")) {
-            run.jvmArgument("-XX:+AllowEnhancedClassRedefinition")
-        }
+        // Uncomment this if you're using the JetBrainsRuntime and you want hotswapping enabled properly in the project.
+        // Hot-swapping is a feature letting you to swap-out code of your mod without restarting game, allowing you to see changes quickly and tinker around with it more easily.
+        // If you're interested, download the apt version of JBR at https://github.com/JetBrains/JetBrainsRuntime/releases, and set it as your Project SDK via Project Structure -> SDK.
+        // if (run.project.javaToolchains.launcherFor(java.toolchain).map { it.metadata.vendor }.getOrElse("").contains("JetBrains")) {
+        //     run.jvmArgument("-XX:+AllowEnhancedClassRedefinition")
+        // }
 
         modSource project.sourceSets.main
     }
@@ -90,9 +93,9 @@ dependencies {
 
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // runtimeOnly "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    // compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    // compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    // runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
