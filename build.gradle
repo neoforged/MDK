@@ -30,7 +30,7 @@ if (rootProject.file('src/main/resources/META-INF/accesstransformer.cfg').exists
 // These can be tweaked, removed, or duplicated as needed.
 runs {
     // applies to all the run configs below
-    configureEach {net.neoforged.gradle.dsl.common.runs.run.Run run ->
+    configureEach { net.neoforged.gradle.dsl.common.runs.run.Run run ->
         // Recommended logging data for a userdev environment
         // The markers can be added/remove as needed separated by commas.
         // "SCAN": For mods scan.
