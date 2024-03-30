@@ -127,6 +127,7 @@ tasks.withType(ProcessResources).configureEach {
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
+            artifactId = project.base.archivesName.get()
             from components.java
         }
     }
