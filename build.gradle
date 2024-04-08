@@ -18,6 +18,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 // If you wish to use enhanced class hotwsapping during debug (DCEVM), uncomment this line.
 // java.toolchain.vendor = JvmVendorSpec.JETBRAINS
 
+// minecraft.accessTransformers.file(rootProject.file("src/main/resources/META-INF/accesstransformer.cfg"))
+
 // Default run configurations.
 // These can be tweaked, removed, or duplicated as needed.
 runs {
