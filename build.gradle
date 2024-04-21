@@ -16,6 +16,9 @@ base {
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+//minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
+//minecraft.accessTransformers.entry('public net.minecraft.client.Minecraft textureManager # textureManager')
+
 // Default run configurations.
 // These can be tweaked, removed, or duplicated as needed.
 runs {
