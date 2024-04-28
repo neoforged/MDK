@@ -4,6 +4,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.neoforged.gradle.userdev' version '7.0.109'
+    id 'com.diffplug.spotless' version '6.22.0'
 }
 
 version = mod_version
@@ -160,5 +161,28 @@ idea {
     module {
         downloadSources = true
         downloadJavadoc = true
+    }
+}
+
+// Spotless Java is an automated code formatter https://github.com/diffplug/spotless
+// It can be used to enforce a consistent style across the entire project by running the spotlessApply task
+spotless {
+    java {
+        // Format all java files in the src/ directory
+        target rootProject.fileTree("src", {
+            include "**/*.java"
+        })
+        // Force files to end with a newline (prevents diff changes on the last line when new content is added)
+        endWithNewline()
+        // Forces indentation to be done with spaces due to inconsistent tab sizes
+        indentWithSpaces()
+        // Removes unused imports 
+        removeUnusedImports()
+        // Enables "skip-formatting" blocks - https://github.com/diffplug/spotless/blob/main/plugin-gradle/README.md#spotlessoff-and-spotlesson
+        toggleOffOn()
+        // Read the eclipse formatter XML at formatter-config.xml
+        eclipse().configFile rootProject.file('formatter-config.xml')
+        // Use the default import order provided by spotless. https://github.com/diffplug/spotless/blob/main/plugin-gradle/README.md#java
+        importOrder()
     }
 }
