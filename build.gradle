@@ -13,6 +13,9 @@ repositories {
     mavenLocal()
 }
 
+//minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
+//minecraft.accessTransformers.entry("public net.minecraft.client.Minecraft textureManager # textureManager")
+
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 dependencies {
