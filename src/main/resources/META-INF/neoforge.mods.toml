@@ -6,7 +6,7 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml" #mandatory
 
-# A version range to match for said mod loader - for regular FML @Mod it will be the the FML version. This is currently 47.
+# A version range to match for said mod loader - for regular FML @Mod it will be the FML version. This is currently 2.
 loaderVersion="${loader_version_range}" #mandatory
 
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
