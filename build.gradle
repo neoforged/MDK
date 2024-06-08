@@ -7,12 +7,12 @@ plugins {
 }
 
 tasks.named('wrapper', Wrapper).configure {
-    // Define wrapper values here so as to not have to always do so when updating gradlew.properties
-    // Wrapper.DistributionType.ALL will download the full gradle sources that comes with documentation attached on
-    // cursor hover of gradle classes and methods. If you want a smaller gradle footprint on your machine,
-    // switch this to be Wrapper.DistributionType.BIN and then run the Gradle wrapper task twice.
-    // (Verify by checking gradle/wrapper/gradle-wrapper.properties to see if distributionUrl now points to `-bin`)
-    distributionType = Wrapper.DistributionType.ALL
+    // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
+    // Switching this to Wrapper.DistributionType.ALL will download the full gradle sources that comes with
+    // documentation attached on cursor hover of gradle classes and methods. However, this comes with increased
+    // file size for Gradle. If you do switch this to ALL, run the Gradle wrapper task twice afterwards.
+    // (Verify by checking gradle/wrapper/gradle-wrapper.properties to see if distributionUrl now points to `-all`)
+    distributionType = Wrapper.DistributionType.BIN
 }
 
 version = mod_version
