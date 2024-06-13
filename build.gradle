@@ -22,11 +22,11 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     // Specify the version of NeoForge to use.
-    version = "${neo_version}"
+    version = project.neo_version
 
     parchment {
-        mappingsVersion = "${parchment_mappings_version}"
-        minecraftVersion = "${parchment_minecraft_version}"
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
     }
 
     // accessTransformers.add(rootProject.file('src/main/resources/META-INF/accesstransformer.cfg'))
