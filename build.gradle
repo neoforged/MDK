@@ -65,7 +65,7 @@ neoForge {
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
 
-        // applies to all the run configs below
+        // applies to all the run configs above
         configureEach {
             // Recommended logging data for a userdev environment
             // The markers can be added/remove as needed separated by commas.
