@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '0.1.74'
+    id 'net.neoforged.moddev' version '0.1.98'
 }
 
 version = mod_version
@@ -29,7 +29,8 @@ neoForge {
         minecraftVersion = project.parchment_minecraft_version
     }
 
-    // accessTransformers.add(rootProject.file('src/main/resources/META-INF/accesstransformer.cfg'))
+    // This line is optional. Access Transformers are automatically detected
+    // accessTransformers.add('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
