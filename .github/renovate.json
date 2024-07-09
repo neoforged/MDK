@@ -4,7 +4,6 @@
     "github>neoforged/actions:renovate_preset"
   ],
   "baseBranches": ["!/main/"],
-  "additionalBranchPrefix": "{{baseBranch}}-",
   "maven": { "enabled": true },
   "packageRules": [
     {
