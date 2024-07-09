@@ -7,6 +7,7 @@
   "maven": {
     "enabled": true
   },
+  "prHourlyLimit": 0,
   "addLabels": ["{{{replace '-mdg' '' baseBranch}}}"],
   "packageRules": [
     {
