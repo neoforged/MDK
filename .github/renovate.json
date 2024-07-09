@@ -7,15 +7,17 @@
   "maven": {
     "enabled": true
   },
-  "dependencyDashboardApproval": false,
   "addLabels": ["{{{replace '-mdg' '' baseBranch}}}"],
   "packageRules": [
     {
-      "matchPackageNames": ["net.neoforged:neoforge"],
+      "dependencyDashboardApproval": false
+    },
+    {
+      "matchDepNames": ["net.neoforged:neoforge"],
       "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$"
     },
     {
-      "matchPackageNames": ["net.neoforged.gradle.userdev"],
+      "matchDepNames": ["net.neoforged.gradle.userdev"],
       "dependencyDashboardApproval": true
     }
   ],
