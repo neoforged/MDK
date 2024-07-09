@@ -4,7 +4,10 @@
     "github>neoforged/actions:renovate_preset"
   ],
   "baseBranches": ["!/main/"],
-  "maven": { "enabled": true },
+  "maven": {
+    "enabled": true
+  },
+  "addLabels": ["{{{replace '-mdg' '' baseBranch}}}"],
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor"],
