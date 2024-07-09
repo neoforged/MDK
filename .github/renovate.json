@@ -10,15 +10,12 @@
   "addLabels": ["{{{replace '-mdg' '' baseBranch}}}"],
   "packageRules": [
     {
+      "excludeDepNames": ["net.neoforged.gradle.userdev"],
       "dependencyDashboardApproval": false
     },
     {
       "matchDepNames": ["net.neoforged:neoforge"],
       "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$"
-    },
-    {
-      "matchDepNames": ["net.neoforged.gradle.userdev"],
-      "dependencyDashboardApproval": true
     }
   ],
   "customManagers": [
