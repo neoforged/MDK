@@ -5,5 +5,26 @@
   ],
   "baseBranches": ["!/main/"],
   "additionalBranchPrefix": "{{baseBranch}}-",
-  "maven": { "enabled": true }
+  "maven": { "enabled": true },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor"],
+      "matchPackageNames": ["net.neoforged:neoforge"],
+      "enabled": false
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^gradle\\.properties$"
+      ],
+      "depNameTemplate": "net.neoforged:neoforge",
+      "matchStrings": [
+        "neo_version=(?<currentValue>[\\d\\.]+)",
+        "neo_version_range=\\[(?<currentValue>[\\d\\.]+),\\)"
+      ],
+      "datasourceTemplate": "maven"
+    }
+  ]
 }
