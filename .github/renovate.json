@@ -11,6 +11,10 @@
       "matchUpdateTypes": ["major", "minor"],
       "matchPackageNames": ["net.neoforged:neoforge"],
       "enabled": false
+    },
+    {
+      "matchPackageNames": ["net.neoforged:neoforge"],
+      "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+)(?<prerelease>[\\-a-z]+)?$"
     }
   ],
   "customManagers": [
