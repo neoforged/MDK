@@ -14,7 +14,7 @@
     },
     {
       "matchPackageNames": ["net.neoforged:neoforge"],
-      "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+)(?<prerelease>[\\-a-z]+)?$"
+      "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$"
     }
   ],
   "customManagers": [
