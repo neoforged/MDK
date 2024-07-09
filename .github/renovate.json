@@ -3,7 +3,7 @@
   "extends": [
     "github>neoforged/actions:renovate_preset"
   ],
-  "baseBranches": ["/1.+/"],
+  "baseBranches": ["/^1.+/"],
   "maven": {
     "enabled": true
   },
