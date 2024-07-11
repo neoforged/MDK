@@ -13,6 +13,9 @@
   "automergeSchedule": [
     "before 6am on monday"
   ],
+  "schedule": [
+    "at any time"
+  ],
   "packageRules": [
     {
       "excludeDepNames": ["net.neoforged.gradle.userdev"],
