@@ -20,7 +20,7 @@
       "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$",
       "automerge": true,
       "automergeSchedule": [
-        "after 11am on thursday"
+        "before 6am on monday"
       ]
     },
     {
