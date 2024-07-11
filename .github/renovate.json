@@ -28,7 +28,7 @@
       ],
       "depNameTemplate": "net.neoforged:neoforge",
       "matchStrings": [
-        "neo_version=(?<currentValue>[\\d\\.\\-a-z]+)$"
+        "neo_version=(?<currentValue>[\\d\\.\\-a-z]+)"
       ],
       "datasourceTemplate": "maven"
     }
