@@ -10,6 +10,9 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "addLabels": ["{{{replace '-mdg' '' baseBranch}}}"],
+  "automergeSchedule": [
+    "after 11am on thursday"
+  ],
   "packageRules": [
     {
       "excludeDepNames": ["net.neoforged.gradle.userdev"],
@@ -17,7 +20,8 @@
     },
     {
       "matchDepNames": ["net.neoforged:neoforge"],
-      "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$"
+      "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$",
+      "automerge": true
     },
     {
       "matchDepNames": ["net.neoforged:neoforge"],
