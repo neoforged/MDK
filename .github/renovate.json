@@ -24,7 +24,7 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^gradle\\.properties$"
+        "gradle\\.properties$"
       ],
       "depNameTemplate": "net.neoforged:neoforge",
       "matchStrings": [
