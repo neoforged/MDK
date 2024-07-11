@@ -18,6 +18,11 @@
     {
       "matchDepNames": ["net.neoforged:neoforge"],
       "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$"
+    },
+    {
+      "matchDepNames": ["net.neoforged:neoforge"],
+      "matchManagers": ["gradle"],
+      "enabled": false
     }
   ],
   "customManagers": [
