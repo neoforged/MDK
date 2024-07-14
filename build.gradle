@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '1.0.8'
+    id 'net.neoforged.moddev' version '1.0.9'
 }
 
 tasks.named('wrapper', Wrapper).configure {
