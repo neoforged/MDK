@@ -51,7 +51,7 @@
       ],
       "depNameTemplate": "org.parchmentmc.data:parchment-{{mcVersion}}",
       "matchStrings": [
-        "(neogradle\\.subsystems\\.parchment\\.minecraftVersion)|(parchment_minecraft_version)=(?<mcVersion>[\\d\\.\\-a-z]+)\s+(neogradle\\.subsystems\\.parchment\\.mappingsVersion)|(parchment_mappings_version)=(?<currentValue>[\\d\\.\\-a-z]+)"
+        "(neogradle\\.subsystems\\.parchment\\.minecraftVersion)|(parchment_minecraft_version)=(?<mcVersion>[\\d\\.\\-a-z]+)\\s+(neogradle\\.subsystems\\.parchment\\.mappingsVersion)|(parchment_mappings_version)=(?<currentValue>[\\d\\.\\-a-z]+)"
       ],
       "datasourceTemplate": "maven"
     } 
