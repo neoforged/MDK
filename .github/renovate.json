@@ -30,6 +30,10 @@
       "matchDepNames": ["net.neoforged:neoforge"],
       "matchManagers": ["gradle"],
       "enabled": false
+    },
+    {
+      "matchDepPatterns": ["org\\.parchmentmc\\.data:parchment-[\\d\\.]+"],
+      "automerge": true
     }
   ],
   "customManagers": [
@@ -51,8 +55,8 @@
       ],
       "depNameTemplate": "org.parchmentmc.data:parchment-{{{mcVersion}}}",
       "matchStrings": [
-        "neogradle\\.subsystems\\.parchment\\.minecraftVersion=(?<mcVersion>[\\d\\.\\-a-z]+)\\s+neogradle\\.subsystems\\.parchment\\.mappingsVersion=(?<currentValue>[\\d\\.\\-a-z]+)",
-        "parchment_minecraft_version=(?<mcVersion>[\\d\\.\\-a-z]+)\\s+parchment_mappings_version=(?<currentValue>[\\d\\.\\-a-z]+)"
+        "neogradle\\.subsystems\\.parchment\\.minecraftVersion=(?<mcVersion>[\\d\\.]+)\\s+neogradle\\.subsystems\\.parchment\\.mappingsVersion=(?<currentValue>[\\d\\.]+)",
+        "parchment_minecraft_version=(?<mcVersion>[\\d\\.]+)\\s+parchment_mappings_version=(?<currentValue>[\\d\\.]+)"
       ],
       "datasourceTemplate": "maven"
     } 
