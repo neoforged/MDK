@@ -43,6 +43,17 @@
         "neo_version=(?<currentValue>[\\d\\.\\-a-z]+)"
       ],
       "datasourceTemplate": "maven"
-    }
+    }, 
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "gradle\\.properties$"
+      ],
+      "depNameTemplate": "org.parchmentmc.data:parchment-{{{replace '-mdg' '' baseBranch}}}",
+      "matchStrings": [
+        "(neogradle\\.subsystems\\.parchment\\mappingsVersion)|(parchment_mappings_version)=(?<currentValue>[\\d\\.\\-a-z]+)"
+      ],
+      "datasourceTemplate": "maven"
+    } 
   ]
 }
