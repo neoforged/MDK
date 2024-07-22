@@ -49,7 +49,7 @@
       "fileMatch": [
         "gradle\\.properties$"
       ],
-      "depNameTemplate": "org.parchmentmc.data:parchment-{{{mcVersion}}}",
+      "depNameTemplate": "org.parchmentmc.data:parchment-{{{baseBranch}}}",
       "matchStrings": [
         "(?:(neogradle\\.subsystems\\.parchment\\.minecraftVersion)|(parchment_minecraft_version))=(?<mcVersion>[\\d\\.\\-a-z]+)\\s+(?:(neogradle\\.subsystems\\.parchment\\.mappingsVersion)|(parchment_mappings_version))=(?<currentValue>[\\d\\.\\-a-z]+)"
       ],
