@@ -23,7 +23,7 @@ repositories {
 }
 
 base {
-    archivesName = mod_id
+    archivesName = "${file_name}-${minecraft_version}"
 }
 
 // Mojang ships Java 21 to end users starting in 1.20.5, so mods should target Java 21.
@@ -146,10 +146,16 @@ tasks.withType(ProcessResources).configureEach {
     }
 }
 
+// Build and publish a -sources.jar as well (useful for addons)
+java {
+    withSourcesJar()
+}
+
 // Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
+            artifactId = project.base.archivesName.get()
             from components.java
         }
     }
