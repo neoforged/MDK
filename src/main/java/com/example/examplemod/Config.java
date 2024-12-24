@@ -3,7 +3,6 @@ package com.example.examplemod;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -57,7 +56,7 @@ public class Config
 
         // convert the list of strings into a set of items
         items = ITEM_STRINGS.get().stream()
-                .map(itemName -> BuiltInRegistries.ITEM.get(ResourceLocation.parse(itemName)))
+                .map(itemName -> BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(itemName)))
                 .collect(Collectors.toSet());
     }
 }
