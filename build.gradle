@@ -93,8 +93,7 @@ neoForge {
     mods {
         // define mod <-> source bindings
         // these are used to tell the game which sources are for which mod
-        // mostly optional in a single mod project
-        // but multi mod projects should define one per mod
+        // multi mod projects should define one per mod
         "${mod_id}" {
             sourceSet(sourceSets.main)
         }
