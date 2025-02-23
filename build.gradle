@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.76'
+    id 'net.neoforged.moddev' version '2.0.78'
     id 'idea'
 }
 
