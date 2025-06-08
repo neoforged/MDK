@@ -3,13 +3,17 @@
   "extends": [
     "github>neoforged/actions:renovate_preset"
   ],
-  "baseBranches": ["/^1.+/"],
+  "baseBranches": [
+    "/^1.+/"
+  ],
   "maven": {
     "enabled": true
   },
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "addLabels": ["{{{replace '-mdg' '' baseBranch}}}"],
+  "addLabels": [
+    "{{{replace '-mdg' '' baseBranch}}}"
+  ],
   "automergeSchedule": [
     "before 6am on monday"
   ],
@@ -18,26 +22,40 @@
   ],
   "packageRules": [
     {
-      "excludeDepNames": ["net.neoforged.gradle.userdev"],
-      "dependencyDashboardApproval": false
+      "dependencyDashboardApproval": false,
+      "matchDepNames": [
+        "!net.neoforged.gradle.userdev"
+      ]
     },
     {
-      "matchDepNames": ["net.neoforged:neoforge"],
+      "matchDepNames": [
+        "net.neoforged:neoforge"
+      ],
       "versioning": "regex:^(?<compatibility>\\d+\\.\\d+)\\.(?<patch>\\d+(\\-beta)?)$",
       "automerge": true
     },
     {
-      "matchDepNames": ["net.neoforged:neoforge"],
-      "matchManagers": ["gradle"],
+      "matchDepNames": [
+        "net.neoforged:neoforge"
+      ],
+      "matchManagers": [
+        "gradle"
+      ],
       "enabled": false
     },
     {
-      "matchDepPatterns": ["org\\.parchmentmc\\.data:parchment-[\\d\\.]+"],
-      "automerge": true
+      "automerge": true,
+      "matchDepNames": [
+        "/org\\.parchmentmc\\.data:parchment-[\\d\\.]+/"
+      ]
     },
     {
-      "matchDatasources": ["gradle-version"],
-      "matchUpdateTypes": ["patch"],
+      "matchDatasources": [
+        "gradle-version"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true
     }
   ],
@@ -52,7 +70,7 @@
         "neo_version=(?<currentValue>[\\d\\.\\-a-z]+)"
       ],
       "datasourceTemplate": "maven"
-    }, 
+    },
     {
       "customType": "regex",
       "fileMatch": [
@@ -64,6 +82,6 @@
         "parchment_minecraft_version=(?<mcVersion>[\\d\\.]+)\\s+parchment_mappings_version=(?<currentValue>[\\d\\.]+)"
       ],
       "datasourceTemplate": "maven"
-    } 
+    }
   ]
 }
